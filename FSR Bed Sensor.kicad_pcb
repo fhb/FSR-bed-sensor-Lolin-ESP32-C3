@@ -339,7 +339,7 @@
     (descr "16-pin module, column spacing 22.86 mm (900 mils), https://wiki.wemos.cc/products:d1:d1_mini, https://c1.staticflickr.com/1/734/31400410271_f278b087db_z.jpg")
     (tags "ESP8266 WiFi microcontroller")
     (attr through_hole)
-    (fp_text reference "ESP32-C3" (at 2.54 -18.512129) (layer "F.SilkS")
+    (fp_text reference "ESP32-C3" (at 5.58 -10.505 90) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 6b1afd44-c34d-4592-877f-ba77ba5aa31e)
     )
@@ -372,7 +372,7 @@
       (net 10 "A5") (tstamp fbd2c73c-9d0c-4e99-b660-9119e20accd6))
     (pad "8" thru_hole circle (at -11.43 -1.27 270) (size 2 2) (drill 1) (layers *.Cu *.Mask)
       (net 3 "3.3V") (tstamp d381b484-cfe3-4de8-8fcf-bfdb43efeb41))
-    (pad "9" thru_hole circle (at 11.43 -1.27 270) (size 2 2) (drill 1) (layers *.Cu *.Mask "F.SilkS")
+    (pad "9" thru_hole circle (at 11.43 -1.27 270) (size 2 2) (drill 1) (layers *.Cu *.Mask)
       (net 1 "VIN") (tstamp c180e215-919e-45e6-8ffd-98dc496a814f))
     (pad "10" thru_hole circle (at 11.43 -3.81 270) (size 2 2) (drill 1) (layers *.Cu *.Mask)
       (net 2 "GND") (tstamp 666f6a4e-954e-45cf-8d6f-b36d96fda8a2))
@@ -455,8 +455,6 @@
       (rotate (xyz 0 0 0))
     )
   )
-
-  (gr_rect (start 111.76 132.08) (end 142.314869 162.56) (layer "F.Cu") (width 0.2) (fill none) (tstamp 2be0295e-403b-46e3-b82f-b38481a01eb5))
 
   (segment (start 127.1 139.51) (end 125.385 137.795) (width 0.2) (layer "F.Cu") (net 1) (tstamp 67ab750b-b5bd-47e9-9a3d-05fe2cc3a508))
   (segment (start 125.385 137.795) (end 118.745 137.795) (width 0.2) (layer "F.Cu") (net 1) (tstamp d5286802-429d-43d8-88a9-42b3eeb99901))
