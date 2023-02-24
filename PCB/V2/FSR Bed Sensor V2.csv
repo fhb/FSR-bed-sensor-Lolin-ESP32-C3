@@ -1,0 +1,5 @@
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"FSR2";"JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal";1;"JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal";;;
+2;"R1 (A3),R1 (A3)";"Potentiometer_Runtron_RM-063_Horizontal";2;"Potentiometer_Runtron_RM-063_Horizontal";;;
+3;"FSR1";"JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal";1;"ST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal";;;
+4;"Wemos LOLIN C3 Pico";"WEMOS_Lolin_ESP32-C3_Pico";1;"ESP32-C3";;;
