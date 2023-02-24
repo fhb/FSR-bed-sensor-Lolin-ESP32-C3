@@ -3,6 +3,8 @@ PCB for 2 FSR sensors using an Lolin ESP32-C3 pico (pin compatible to Lolin ESP3
 
 V1 with BME280:
 
+![IMG_8872](https://user-images.githubusercontent.com/680408/221297438-faae9180-1a8d-4dde-a87d-81f1c281c76e.jpeg)
+
 ![IMG_0447](https://user-images.githubusercontent.com/680408/221107106-00144642-14b8-48eb-9cb0-6d315c67ed4f.PNG)
 
 V2 with optional BME280 using the I2C JST-SH port on the Lolin C3 Pico and updated (hopefully more robust) potentiometers (RM063)
