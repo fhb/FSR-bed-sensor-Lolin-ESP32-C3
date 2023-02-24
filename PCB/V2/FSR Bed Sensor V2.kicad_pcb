@@ -7,6 +7,7 @@
   (paper "A5")
   (title_block
     (title "FSR Bed Sensor PCB for Wemos Lolin-ESP32-C3  ")
+    (date "2023-02-24")
     (rev "V2")
   )
 
@@ -202,7 +203,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
-    (model "/Users/Felix/Dropbox (Privat)/DB_Ideen + Projekte/PCB/FSR Bed Sensor/User Library-RM-063.STEP"
+    (model "${KIPRJMOD}/custom 3d models/RM-063.STEP"
       (offset (xyz 2.5 -0.5 -2.5))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 180))
@@ -303,7 +304,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
-    (model "/Users/Felix/Dropbox (Privat)/DB_Ideen + Projekte/PCB/FSR Bed Sensor/User Library-RM-063.STEP"
+    (model "${KIPRJMOD}/custom 3d models/RM-063.STEP"
       (offset (xyz 2.5 -0.5 -2.5))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 180))
@@ -395,7 +396,7 @@
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp b6714dea-98fa-442d-a375-2d7f4acf33f4)
     )
-    (fp_text value "MountingHole_2.2mm_M2" (at 0 3.2) (layer "F.Fab")
+    (fp_text value "MountingHole_2.2mm_M2" (at 0 3.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 2851a22f-ad78-43f2-bf7e-f204acc7ddac)
     )
@@ -420,7 +421,7 @@
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 1849de62-e2d3-43ca-946b-624ddc2da8bc)
     )
-    (fp_text value "MountingHole_2.2mm_M2" (at 0 3.2) (layer "F.Fab")
+    (fp_text value "MountingHole_2.2mm_M2" (at 0 3.2) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp f425051b-4956-4ba8-8e05-2aa176e65402)
     )
