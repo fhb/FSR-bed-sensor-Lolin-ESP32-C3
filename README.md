@@ -1,5 +1,5 @@
 # FSR-bed-sensor-Lolin-ESP32-C3
-PCB for 2 FSR sensors using an Lolin ESP32-C3 pico (pin compatible to Login ESP32-C3 mini) and an additional BME280 5V Temperature und Humidity sensor breakout board. Has been tested, it works. Make sure the JST-XH plugs get properly connected!
+PCB for 2 FSR sensors using an Lolin ESP32-C3 pico (pin compatible to Lolin ESP32-C3 mini) and an additional BME280 5V Temperature und Humidity sensor breakout board. Has been tested, it works. Make sure the JST-XH plugs get properly connected!
 
 List of materials:
 2x ACP_CA6-H2,5 0-1MegaOhm
