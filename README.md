@@ -18,5 +18,8 @@ More information:
 https://community.home-assistant.io/t/fsr-the-best-bed-occupancy-sensor/365795
 
 ![a421b668a833dec9ba023b53496f0ecf3098bdd8](https://user-images.githubusercontent.com/680408/221107430-2546456b-8db6-4fad-9abd-55f161b516e7.jpeg)
+V2
+
+![image](https://github.com/fhb/FSR-bed-sensor-Lolin-ESP32-C3/blob/main/PCB/V2/FSR%20Bed%20Sensor%20V2.png)
 
 ![image](https://user-images.githubusercontent.com/680408/221107157-21d8fa61-bfc1-44e4-af08-c1cf0943ead9.png)
