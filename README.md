@@ -33,7 +33,7 @@ https://community.home-assistant.io/t/fsr-the-best-bed-occupancy-sensor/365795
 
 V1:
 
-![a421b668a833dec9ba023b53496f0ecf3098bdd8](https://user-images.githubusercontent.com/680408/221107430-2546456b-8db6-4fad-9abd-55f161b516e7.jpeg)
+![FSR Bed Sensor V1](https://user-images.githubusercontent.com/680408/221301565-11525a0d-e8e3-448b-8b9e-4845c7cc11e4.png)
 
 V2:
 
