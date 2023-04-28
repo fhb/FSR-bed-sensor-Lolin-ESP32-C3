@@ -16,7 +16,9 @@ List of materials:
 * 2x RM063 Potentiometer (V2)
 * 2x FSR SF15-600 10kg
 
-optional: 
+Optional temperature sensor # 1:
+
+Optional temperature sensor # 2: 
 * JST-SH1.0 male connector --- 4 wire ---  JST-XH female + male connector 
 * BME280 5V Board (I2C)
 
