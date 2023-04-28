@@ -14,6 +14,9 @@ List of materials:
 
 ![IMG_0450](https://user-images.githubusercontent.com/680408/221266709-a9bba09b-9563-4c42-af82-83bf907763ad.PNG)
 ![image](https://github.com/fhb/FSR-bed-sensor-Lolin-ESP32-C3/blob/main/PCB/V2/FSR%20Bed%20Sensor%20V2.png)
+![IMG_9154](https://user-images.githubusercontent.com/680408/235236418-75ce9934-639b-4f9c-8574-40758e27a00b.jpeg)
+![IMG_9149](https://user-images.githubusercontent.com/680408/235236445-df8e15e3-aad9-4bba-a3b2-22417b6d44f4.jpeg)
+
 
 Option 1:The Wemos SHT-30 is the easiest option as ready made SH1.0 4Pin cables are available and I added a case for this as well
 Case for Wemos SHT-30:
