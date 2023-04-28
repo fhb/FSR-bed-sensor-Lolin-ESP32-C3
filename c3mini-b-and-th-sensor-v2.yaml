@@ -1,0 +1,210 @@
+esphome:
+  name: c3mini-b-and-th-sensor
+  #name: c3mini-bme280
+  platformio_options:
+    board_build.flash_mode: dio
+  
+esp32:
+  #board: lolin_c3_mini
+  board: esp32-c3-devkitm-1
+  variant: esp32c3  
+  #framework:
+  #  type: esp-idf
+  #  version: latest
+  framework:
+    type: arduino
+    version: latest
+   # platform_version: latest
+
+preferences:
+    flash_write_interval: 1min
+
+# Enable logging
+logger:
+  level: DEBUG  
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "0lc/ak+1FzhYzGnwauN2ndsSSKOzf1uUv6F1TQz5KHE="
+
+ota:
+  password: "4d8f7eae0b5c0ac37d735d394c3da9bb"
+
+#status_led:
+#  pin: 7
+i2c:
+  #for ESP32C3 standard pins + JST_PH1.0 4Pin Port ==> sda: GPIO8, scl: GPIO10
+  sda: GPIO8
+  scl: GPIO10
+  
+  #for D1 Mini standard pins ==> sda: GPIO4, scl: GPIO5
+  #sda: GPIO4
+  #scl: GPIO5
+  scan: true
+  id: bus_a
+
+# Example configuration entry
+#https://esphome.io/components/sensor/bme680_bsec.html?highlight=bme680
+
+
+      
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  output_power: "8.5"
+
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Testc3Mini Fallback Hotspot"
+    password: "3MQyNF1mPhWm"
+
+#captive_portal:
+
+light:
+  - platform: neopixelbus
+    type: RGB
+    variant: WS2811
+    pin: GPIO7
+    num_leds: 1
+    name: "BME280 Status Light"
+
+switch:
+  - platform: restart
+    name: c3mini-b-and-th-sensor-restart
+    id: restart_switch
+
+sensor:
+  - platform: sht3xd
+    temperature:
+      name: "Bedroom Temperature"
+    humidity:
+      name: "Bedroom Humidity"
+    address: 0x45
+    update_interval: 60s
+    i2c_id: bus_a
+ 
+ # - platform: bme280
+ #   temperature:
+ #     name: "BME280 Temperature"
+ #     oversampling: 16x
+ #   pressure:
+ #     name: "BME280 Pressure"
+ #   humidity:
+ #     name: "BME280 Humidity"
+ #   #standard adress with BME280 Clone 0x76, can be changed to 0x77 with trace cut and solder jumper: https://lastminuteengineers.com/bme280-arduino-tutorial/
+ #   address: 0x76
+ #   i2c_id: bus_a
+ #   update_interval: 60s
+
+#  - platform: bme280
+#     temperature:
+#      name: "BME280 Temperature onboard"
+#      oversampling: 16x
+#    pressure:
+#      name: "BME280 Pressure onboard"
+#    humidity:
+#      name: "BME280 Humidity onboard"
+#    #standard adress with BME280 Clone 0x76, can be changed to 0x77 with trace cut and solder jumper: https://lastminuteengineers.com/bme280-arduino-tutorial/
+#    address: 0x77
+#    i2c_id: bus_a
+#    update_interval: 60s
+
+  - platform: wifi_signal
+    name: "BME280 Wifi Signal in dB"
+    id: bme280_wifi_signal_db
+    update_interval: 60s
+  - platform: adc
+    pin: GPIO0 # Use ADC pin on ESP32
+    attenuation: 11db
+    name: "Left Bed Sensor"
+    id: "Left_bed_sensor"
+    icon: mdi:arrow-collapse-vertical
+    update_interval: 2s
+    filters:
+      - sliding_window_moving_average:
+          window_size: 10
+          send_every: 2
+      - or:
+          - throttle: 180s
+          - delta: 0.1
+  - platform: adc
+    pin: GPIO3 #Use ADC pin on ESP32
+    attenuation: 11db #auto
+    name: "Right Bed Sensor"
+    id: "Right_bed_sensor"
+    icon: mdi:arrow-collapse-vertical
+    update_interval: 2s
+    filters:
+      - sliding_window_moving_average:
+          window_size: 10
+          send_every: 2
+      - or:
+          - throttle: 180s
+          - delta: 0.1
+
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: BME280 IP Address
+    ssid:
+      name: BME280  Connected SSID
+      id: bme280_wifi_info_ssid
+
+
+
+number:
+  - platform: template
+    name: "Left Trigger Level"
+    id: "trigger_level_left"
+    mode: box
+    optimistic: true
+    min_value: 0
+    restore_value: true
+    unit_of_measurement: "V"
+    device_class: voltage
+    max_value: 3.3
+    step: 0.01
+    icon: mdi:chart-sankey
+
+  - platform: template
+    name: "Right Trigger Level"
+    id: "trigger_level_right"
+    device_class: voltage
+    unit_of_measurement: "V"
+    mode: box
+    optimistic: true
+    min_value: 0
+    restore_value: true
+    max_value: 3.3
+    step: 0.01
+    icon: mdi:chart-sankey
+
+binary_sensor:
+  - platform: template
+    name: "Left Bed Occupancy"
+    device_class: occupancy
+    icon: mdi:bed-outline
+
+    id: leftoccupancy
+    # Checks to see if voltage is lower than the trigger level set via input number, if so it sets left bed side to occupied
+    lambda: |-
+      if (id(Left_bed_sensor).state < id(trigger_level_left).state) {
+        return true;
+      } else {
+        return false;
+      }
+  - platform: template
+    name: "Right Bed Occupancy"
+    id: rightoccupancy
+    # Checks to see if voltage is lower than the trigger level set via input number, if so it sets right bed side to occupied
+    device_class: occupancy
+    icon: mdi:bed-outline
+
+    lambda: |-
+      if (id(Right_bed_sensor).state < id(trigger_level_right).state) {
+        return true;
+      } else {
+        return false;
+      }
+ 
