@@ -5,7 +5,7 @@ The I2C port on the Lolin ESP32-C3 can be used to connect an optional temperatur
 Case for PCB + Lolin ESP32-C3:
 ![IMG_0450](https://user-images.githubusercontent.com/680408/221266709-a9bba09b-9563-4c42-af82-83bf907763ad.PNG)
 Case for Wemos SHT-30:
-![Uploading IMG_0580.PNG…]()
+![IMG_0580](https://user-images.githubusercontent.com/680408/235232285-8df83e33-caee-40f7-8dae-9fccd3ab1728.PNG)
 ![image](https://github.com/fhb/FSR-bed-sensor-Lolin-ESP32-C3/blob/main/PCB/V2/FSR%20Bed%20Sensor%20V2.png)
 
 
