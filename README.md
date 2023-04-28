@@ -2,8 +2,10 @@
 This project includes everything needed to build a bed occupancy sensor:
 A PCB connecting 2 FSR sensors with 2 RM063 resistors to an Lolin ESP32-C3 pico (pin compatible to Lolin ESP32-C3 mini) and a Case.
 The I2C port on the Lolin ESP32-C3 can be used to connect an optional temperature sensor. The Wemos SHT-30 is the easiest option as ready made SH1.0 4Pin cables are available. You could also make your own JST-XH to JST-SH1.0 cable (Option 2). Everything has been tested and works. Make sure the JST-XH plugs are properly plugged in.
-
+Case for PCB + Lolin ESP32-C3:
 ![IMG_0450](https://user-images.githubusercontent.com/680408/221266709-a9bba09b-9563-4c42-af82-83bf907763ad.PNG)
+Case for Wemos SHT-30:
+![Uploading IMG_0580.PNG…]()
 ![image](https://github.com/fhb/FSR-bed-sensor-Lolin-ESP32-C3/blob/main/PCB/V2/FSR%20Bed%20Sensor%20V2.png)
 
 
