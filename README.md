@@ -18,14 +18,12 @@ List of materials:
 ![IMG_9149](https://user-images.githubusercontent.com/680408/235236445-df8e15e3-aad9-4bba-a3b2-22417b6d44f4.jpeg)
 
 
-Option 1:The Wemos SHT-30 is the easiest option as ready made SH1.0 4Pin cables are available, that's the option I ended up using and designing a case for:
-Case for Wemos SHT-30:
+Option 1:The Wemos SHT-30 is the easiest option as ready made SH1.0 4Pin cables are available, that's the option I ended up using and designing a case for.
 * 1x Wemos SHT-30 (https://www.wemos.cc/en/latest/d1_mini_shield/sht30.html)
 * I2C Cable 10cm für LOLIN (WEMOS) SH1.0 4Pins
 
 ![IMG_0580](https://user-images.githubusercontent.com/680408/235232285-8df83e33-caee-40f7-8dae-9fccd3ab1728.PNG)
 
-Option 2: You could also make your own JST-XH to JST-SH1.0 cable and solder a JST-XH connector to a BME280 5V Board . 
-Case for PCB + Lolin ESP32-C3:
+Option 2: You could also make your own JST-XH to JST-SH1.0 cable and solder a JST-XH connector to a BME280 5V Board. 
 * JST-SH1.0 male connector --- 4 wire ---  JST-XH female + male connector 
 * BME280 5V Board (I2C)
