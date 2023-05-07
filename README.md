@@ -18,7 +18,7 @@ List of materials:
 ![IMG_9149](https://user-images.githubusercontent.com/680408/235236445-df8e15e3-aad9-4bba-a3b2-22417b6d44f4.jpeg)
 
 
-Option 1:The Wemos SHT-30 is the easiest option as ready made SH1.0 4Pin cables are available and I added a case for this as well
+Option 1:The Wemos SHT-30 is the easiest option as ready made SH1.0 4Pin cables are available, that's the option I ended up using and designing a case for:
 Case for Wemos SHT-30:
 * 1x Wemos SHT-30 (https://www.wemos.cc/en/latest/d1_mini_shield/sht30.html)
 * I2C Cable 10cm für LOLIN (WEMOS) SH1.0 4Pins
